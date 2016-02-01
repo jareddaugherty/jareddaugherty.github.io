@@ -1,5 +1,5 @@
 body {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: monospace;
   padding: 20px;
   margin: 0;
   font-weight: 400;
@@ -108,14 +108,14 @@ span[data-note] {
   }
 }
 .logo {
-  margin: 0 auto 35px;
+  margin: 0 auto 5px;
   text-align: center;
   animation-duration: 0.7s;
   animation-fill-mode: both;
-  animation-name: bounce;
+  animation-name: slideInDown;
   -webkit-animation-duration: 0.7s;
   -webkit-animation-fill-mode: both;
-  -webkit-animation-name: bounce;
+  -webkit-animation-name: slideInDown;
   a {
     background: #ddd url("gravatar_wrapper.png");
     color: #000;
@@ -177,6 +177,10 @@ span[data-note] {
       margin-top: -5px;
     }
   }
+}
+.my-name {
+  margin: 0 auto 35px;
+  text-align: center;
 }
 iframe {
   margin: 45px 0 !important;
@@ -376,5 +380,16 @@ section {
   }
   100% {
     -webkit-transform: none;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }
