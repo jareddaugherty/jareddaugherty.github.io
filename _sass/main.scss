@@ -107,6 +107,7 @@ span[data-note] {
     }
   }
 }
+
 .logo {
   margin: 0 auto 5px;
   text-align: center;
@@ -131,8 +132,8 @@ span[data-note] {
     border: 5px solid #fff;
     box-sizing: border-box;
     &:hover,
-    &:focus {
-      background: yellow;
+    &:focus + body {
+      background: #FEFE22;
     }
     &:hover + .logo-prompt,
     &:focus + .logo-prompt {
@@ -178,7 +179,8 @@ span[data-note] {
     }
   }
 }
-.my-name {
+
+.byline {
   margin: 0 auto 35px;
   text-align: center;
 }
@@ -385,7 +387,7 @@ section {
 
 @keyframes slideInDown {
   from {
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, 0, 0);
     visibility: visible;
   }
 
